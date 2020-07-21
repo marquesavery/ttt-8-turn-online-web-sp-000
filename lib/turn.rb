@@ -21,14 +21,6 @@ def input_to_index(user_input)
   index = converted_input - 1
 end
 
-def position_taken?(board, index)
-  if board[index] == " " || board[index] == "" || board[index] == nil
-    false
-  else board[index] == "X" || board[index] == "O"
-    true
-  end
-end
-
 def move(board, index, value = "X")
   board[index] = value
 end
