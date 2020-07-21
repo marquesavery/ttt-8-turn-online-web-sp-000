@@ -32,9 +32,8 @@ def turn(board)
   until index.to_i <= 9 || index.to_i >= 1
     if valid_move?(board, index) == true
       move(board, index)
-    else
-      puts "Please enter 1-9:"
     end
+    puts "Please enter 1-9:"
     index = input_to_index(gets.strip)
   end
 end
