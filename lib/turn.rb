@@ -8,6 +8,13 @@ end
 
 def valid_move?(board, index)
   if index <= 8 && index >= 0
+    if board[index] == " " || board[index] == "" || board[index] == nil
+      false
+    end
+  else board[index] == "X" || board[index] == "O"
+    true
+  end
+
 
 def input_to_index(user_input)
   converted_input = user_input.to_i
