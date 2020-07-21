@@ -9,10 +9,9 @@ end
 def valid_move?(board, index)
   if board[index] == "X" || board[index] == "O"
     false
-  elsif board[index] == " " || board[index] == ""
+  elsif board[index] == " " || board[index] == "" || board[index] == nil
     true
-    puts "here"
-  else index <= 8
+  else index > 8 || index < 0
     false
   end
 end
@@ -37,4 +36,6 @@ end
 def turn(board)
   puts "Please enter 1-9:"
   index = input_to_index(gets.strip)
+  if valid_move?(board, index) == true
+
 end
